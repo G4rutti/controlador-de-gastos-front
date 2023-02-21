@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100vw;
+    height: 25vh;
+    justify-content: center;
+    display: flex;
+    background-color: #357360;
+}
+header h1{
+    color: white;
+    position: relative;
+    align-self: center;
+}
+.cardDados{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.card {
+    position: relative;
+    bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    width: 20vw;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.card p{
+    margin: auto;
+    font-size: 2rem;
+}
+.card h2{
+    font-size: 1.5rem;
+}
+
+.inputSection{
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79vw;
+    height: 10vh;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+section{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.input {
+    border-radius: 7px;
+    height: 5vh;
+    border: 0;
+    outline: auto grey;
+    padding-inline: 15px;
+    font-size: 16px;
+    transform: all 200ms;
+}
+.input:focus {
+    text-decoration: underline 6px;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    border: 1px solid grey;
+}
+
+select{
+    border-radius: 7px;
+    height: 5vh;
+    border: 0;
+    color: grey;
+    padding-inline: 15px;
+    font-size: 16px;
+    transform: all 200ms; 
+}
+select:focus {
+    text-decoration: underline 6px;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    border: 1px solid grey;
+}
+
+
+
+.cssbuttons-io-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.5em 1.4em 0.5em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, #5AC2A3 0%, #357360 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 6px;  
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+
+.lixeira{
+    position: relative;
+    left: 5vw;
+}
+
+@media (max-width: 900px) {
+    .cardDados{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 75vw;
+        margin-bottom: 2vh;
+    }
+    .input{
+        width: 35vw;
+    }
+    .inputSection{
+        padding: 2vw;
+        flex-wrap: wrap;
+        height: 23vh;
+    }
+
+}

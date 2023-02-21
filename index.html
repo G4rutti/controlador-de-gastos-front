@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4c0dbaccd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Controle de Gastos</title>
+</head>
+<body onload="atualizarTabela()">
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+    <main>
+        <div class="cardDados">
+            <div class="card">
+                <h2>Entrada</h2>
+                <p id="entrada">R$ 0</p>
+            </div>
+            <div class="card">
+                <h2>Saída</h2>
+                <p id="saida">R$ 0</p>
+            </div>
+            <div class="card">
+                <h2>Total</h2>
+                <p id="total">R$ 0</p>
+            </div>
+        </div>
+        <div class="inputSection">
+            <section>
+                <input placeholder="Descrição" type="text" name="text" class="input" id="descricao">
+            </section>
+            <section>
+                <input placeholder="Valor" type="number" value="0" class="input" id="valor">
+            </section>
+            <section>
+                <select name="" id="tipo">
+                    <option value="true">Entrada</option>
+                    <option value="talse">Saída</option>
+                </select>
+            </section>
+            <section>
+                <button class="cssbuttons-io-button" onclick="adicionarFinancas()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+                    <span>Adicionar</span>
+                  </button>
+            </section>
+        </div>
+        <table id="despesas" class="table" style="width: 79vw; margin: auto; background: rgb(236, 236, 236);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; margin-bottom: 15vh;">
+            <thead>
+              <tr>
+                <th scope="col">Descrição</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </main>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

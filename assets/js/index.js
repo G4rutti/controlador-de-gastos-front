@@ -160,6 +160,7 @@ async function adicionarPasta(){
         })
         atualizarTabelaPasta()
         atualizarTabelaPasta()
+        atualizarTabelaPasta()
     }
     document.getElementById("descricao-pasta").value = ""
 }

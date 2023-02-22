@@ -183,6 +183,7 @@ async function adicionarFinancas() {
     }
     atualizarTabelaGastos(tipoDado[0]["tipoPasta"])
     atualizarTabelaGastos(tipoDado[0]["tipoPasta"])
+    atualizarTabelaGastos(tipoDado[0]["tipoPasta"])
 }
 
 

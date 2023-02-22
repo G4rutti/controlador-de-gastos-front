@@ -161,6 +161,7 @@ async function adicionarPasta(){
         atualizarTabelaPasta()
         atualizarTabelaPasta()
     }
+    document.getElementById("descricao-pasta").value = ""
 }
     
 async function adicionarFinancas() {
@@ -184,6 +185,9 @@ async function adicionarFinancas() {
     atualizarTabelaGastos(tipoDado[0]["tipoPasta"])
     atualizarTabelaGastos(tipoDado[0]["tipoPasta"])
     atualizarTabelaGastos(tipoDado[0]["tipoPasta"])
+
+    document.getElementById('descricao-gastos').value = ""
+    document.getElementById('valor-gastos').value = "0"
 }
 
 

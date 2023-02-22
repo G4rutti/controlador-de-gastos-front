@@ -134,12 +134,12 @@ function criarTrPasta(tipo, id){
 
 //Buscas
 const buscarFinancas = async() => {
-    const response = await fetch('http://localhost:3000/ler');
+    const response = await fetch('https://controlador-de-gastos-two.vercel.app//ler');
     const financas = await response.json();
     return financas
 }
 const procurarPeloTipoDado = async(tipoDado) => {
-    const response = await fetch(`http://localhost:3000/tipoDado/${tipoDado}`);
+    const response = await fetch(`https://controlador-de-gastos-two.vercel.app//tipoDado/${tipoDado}`);
     const tipo = await response.json();
     return tipo
 }
@@ -151,7 +151,7 @@ async function adicionarPasta(){
         alert("Preencha os campos, por favor.")
     }else{
         const data = JSON.stringify({ tipoPasta: document.getElementById('descricao-pasta').value});
-        fetch('http://localhost:3000/criarPasta', {
+        fetch('https://controlador-de-gastos-two.vercel.app//criarPasta', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -173,7 +173,7 @@ async function adicionarFinancas() {
     }
     else{
         const data = JSON.stringify({ idGasto: Date.now().toString(), tipo: type, descricao: desc, valor: number });
-        fetch(`http://localhost:3000/criarGasto/${tipoDado[0]["tipoPasta"]}`, {
+        fetch(`https://controlador-de-gastos-two.vercel.app/criarGasto/${tipoDado[0]["tipoPasta"]}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -208,7 +208,7 @@ async function removeTrPasta(id){
 //Remove DB
 async function deletarFinanca(id) {
     try {
-      const response = await fetch(`http://localhost:3000/deletar/${id}`, {
+      const response = await fetch(`https://controlador-de-gastos-two.vercel.app/deletar/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -223,7 +223,7 @@ async function deletarFinanca(id) {
 }
 async function deletarGasto(tipo, idGasto) {
     try {
-      const response = await fetch(`http://localhost:3000/gastos/${tipo}/${idGasto}`, {
+      const response = await fetch(`https://controlador-de-gastos-two.vercel.app/gastos/${tipo}/${idGasto}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'

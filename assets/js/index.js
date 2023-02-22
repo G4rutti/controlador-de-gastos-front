@@ -134,12 +134,12 @@ function criarTrPasta(tipo, id){
 
 //Buscas
 const buscarFinancas = async() => {
-    const response = await fetch('https://controlador-de-gastos-two.vercel.app//ler');
+    const response = await fetch('https://controlador-de-gastos-two.vercel.app/ler');
     const financas = await response.json();
     return financas
 }
 const procurarPeloTipoDado = async(tipoDado) => {
-    const response = await fetch(`https://controlador-de-gastos-two.vercel.app//tipoDado/${tipoDado}`);
+    const response = await fetch(`https://controlador-de-gastos-two.vercel.app/tipoDado/${tipoDado}`);
     const tipo = await response.json();
     return tipo
 }
@@ -151,7 +151,7 @@ async function adicionarPasta(){
         alert("Preencha os campos, por favor.")
     }else{
         const data = JSON.stringify({ tipoPasta: document.getElementById('descricao-pasta').value});
-        fetch('https://controlador-de-gastos-two.vercel.app//criarPasta', {
+        fetch('https://controlador-de-gastos-two.vercel.app/criarPasta', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

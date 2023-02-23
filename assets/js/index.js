@@ -35,6 +35,7 @@ async function abrirPasta(){
 async function atualizarTabelaGastos(tipoDado){
     document.getElementById("entrada").innerText = "R$ 0"
     document.getElementById("saida").innerText = "R$ 0"
+    document.getElementById("total").innerText = "R$ 0"
 
     
     const data = await procurarPeloTipoDado(tipoDado)
